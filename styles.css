@@ -18,7 +18,7 @@ body {
 }
 
 article.image::before {
-  content: url("cat.png");
+  content: url("cat.jpeg");
   margin-right: 20px;
 }
 
