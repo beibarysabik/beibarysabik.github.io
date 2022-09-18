@@ -17,6 +17,18 @@ body {
 	-webkit-background-clip: text;
 }
 
+article.image::before {
+  content: url("cat.png");
+  margin-right: 20px;
+}
+
+.bannerimage {
+  width: 0px;
+  height: 0px;
+  background-image: url("nature.jpeg");
+  margin: 0;
+  padding: 0;
+}
 nav {
 	position: sticky;
 	top: 0;
