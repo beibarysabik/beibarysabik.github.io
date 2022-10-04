@@ -6,38 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Design</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <!-- HEADER -->
   <header>
-    <div class="banner">Web Programming...</div>
+    <div class="banner" id="banner">Web Programming...</div>
   </header>
 
   <!-- Navbar -->
-  <nav class="menul">
-      <a class="logo" href="#">
-        <img src="logo.png" alt="logo" width="80px" height="80px">
-      </a>
-      <ul class="menu">
-        <li><a id="menuel" class="active" href="#task">Task</a></li>
-        <li><a id="menuel" href="#requirements">Requirements</a></li>
-        <li><a id="menuel" href="#submission">Submission</a></li>
-        <li><a id="menuel" href="#grading">Grading</a></li>
-        <li><a id="menuel" href="#deadline">Deadline</a></li>
-        <li><a id="menuel" href="#">SignIn</a></li>
-      </ul>
-    </nav>
+  <nav class="topnav" id="myTopnav">
+    <!--<a id="menuel" href="#banner"><img src="logo.png" class="logo"></a> -->
+    <a id="menuel" class="active" href="#task">Task</a>
+    <a id="menuel" href="#requirements">Requirements</a>
+    <a id="menuel" href="#submission">Submission</a>
+    <a id="menuel" href="#grading">Grading</a>
+    <a id="menuel" href="#deadline">Deadline</a>
+    <a id="menuel" href="#">SignIn</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+  </a>
+  </nav>
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += "responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
 
   <!-- Main Content -->
-  <section class="main_content">
+  <section class="main_content column1">
     <h1 id="main-heading" class="topic">
       Lab 4 - Designing with CSS 
     </h1>
     <hr>
-    <article class="image" id="task">
+    <article class="image column" id="task">
       <h2 >Task</h2>
       <p>
-        <img class="bannerimage" src="#" alt="" width="300px" height="210">
+        <img class="bannerimg" src="cat.jpg" alt="" width="300px" height="210px">
         As you have alredy learned in the last lecture, 
         CSS is about the presentation of the documents
         like HTML or XML.
@@ -54,7 +65,7 @@
         <a href="#requirements" id="next">Next...</a>
       </p>
     </article>
-    <article id="requirements">
+    <article id="requirements" class="column">
       <h2 >Requirements</h2>
       <p>
         
@@ -116,7 +127,7 @@
         <a href="#submission" id="next">Next...</a>
       </p>
     </article>
-    <article id="submission">
+    <article id="submission" class="column">
       <h2>Submission</h2>
       <p>
        As usual, you <strong>must</strong> submit 
@@ -143,7 +154,7 @@
         <a href="#grading" id="next">  Next...</a>
       </p>
     </article>
-    <article id="grading">
+    <article id="grading" class="column">
       <h2>Grading</h2>
       For this assignment you will get 
       <strong>80 points</strong>  in total.
@@ -209,8 +220,8 @@
   <!-- Aside Information -->
   <aside>
     <h3>Important</h3>
-    <section class="aside_content">
-      <article id="deadline">
+    <section class="aside_content column1">
+      <article id="deadline" class="column">
         <h4>Deadlines:</h4>
         There are two deadlines - one for 
         forming a group and the other is for the 
@@ -230,7 +241,7 @@
       </section>
      
         <h3>Some Dummy Content</h3>
-       <section>
+       <section class="">
         <article>
         <h4>Article 1</h4>
         <p>
@@ -271,7 +282,7 @@
   </aside>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="footer">
     <div class="contacts">
       <div >
         <h5>Contacts</h5>
