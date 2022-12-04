@@ -1,5 +1,11 @@
 @import url(https://fonts.google.com/specimen/Quicksand);
 
+@font-face {
+  font-family: Quicksand;
+  src: url(Quicksand-VariableFont_wght.ttf);
+  font-weight: light;
+}
+
 html {
   font-family: "Quicksand";
   scroll-behavior: smooth;
